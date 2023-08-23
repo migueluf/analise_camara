@@ -29,7 +29,7 @@ for u in df['id']:
     mostrar = dfgeral.filter(items=colunas)
     print(mostrar['id'])
     print(mostrar['nome'])
-    #envio de dados para o banco
+    #envio de dados para o banco no campo name insira o nome que será a tabela
     mostrar.to_sql(con=db_connection, name='detalhes', if_exists='append', index=False)
     
     #mostrar.info()
